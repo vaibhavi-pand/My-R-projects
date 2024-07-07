@@ -14,6 +14,10 @@ plot(df$years_experienced, df$salary, main='Salary versus Years of Experience',x
 #distribution of salary and checking for outliers
 boxplot(df$salary)
 
+#installing packages
+install.packages('caTools')
+library(caTools)
+
 #fitting simple linear regression to the training set
 set.seed(101)
 split = sample.split(df$salary, SplitRatio = 0.7)
